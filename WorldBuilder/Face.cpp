@@ -1,7 +1,9 @@
 #include "Face.h"
+#include "IdentityManager.h"
 
 Face::Face(Texture t_texture, SpacialPoint t_x, SpacialPoint t_y, SpacialPoint t_z) : m_texture(t_texture), m_x(t_x), m_y(t_y), m_z(t_z)
 {
+	m_id = IdentityManager::getInstance().getFaceId();
 	m_rotation = DEFAULT_ROTATION;
 	m_lightmapscale = DEFAULT_LIGHTMAPSCALE;
 	m_smoothinggroups = DEFAULT_SMOOTHINGROUPS;

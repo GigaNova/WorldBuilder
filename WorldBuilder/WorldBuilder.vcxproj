@@ -151,17 +151,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Dungeon.h" />
     <ClInclude Include="Face.h" />
     <ClInclude Include="FileWriter.h" />
+    <ClInclude Include="IdentityManager.h" />
     <ClInclude Include="Map.h" />
+    <ClInclude Include="RandomRoomDungeon.h" />
+    <ClInclude Include="Rectangle.h" />
+    <ClInclude Include="Room.h" />
     <ClInclude Include="Sides.h" />
     <ClInclude Include="Solid.h" />
     <ClInclude Include="SpacialPoint.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Dungeon.cpp" />
     <ClCompile Include="Face.cpp" />
     <ClCompile Include="FileWriter.cpp" />
     <ClCompile Include="Map.cpp" />
+    <ClCompile Include="RandomRoomDungeon.cpp" />
+    <ClCompile Include="Room.cpp" />
     <ClCompile Include="Solid.cpp" />
     <ClCompile Include="WorldBuilder.cpp" />
   </ItemGroup>

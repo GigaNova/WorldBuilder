@@ -1,11 +1,14 @@
 #include "Solid.h"
 #include "Sides.h"
+#include "IdentityManager.h"
 
 Solid::Solid(int t_x, int t_y, int t_z, int t_width, int t_length, int t_height)
 {
 	for(auto face = 0; face < AMOUNT_OF_FACES; ++face)
 	{
 		Face* p_face = nullptr;
+
+		m_id = IdentityManager::getInstance().getSolidId();
 
 		switch (face)
 		{
