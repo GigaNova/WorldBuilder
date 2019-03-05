@@ -22,6 +22,11 @@ void Map::addDungeon(Dungeon* t_dungeon)
 	{
 		addRoom(pRoom);
 	}
+
+	for (Entity* pEntity : t_dungeon->getEntities())
+	{
+		m_entities.push_back(pEntity);
+	}
 }
 
 void Map::addRoom(Room* t_room)
@@ -30,6 +35,16 @@ void Map::addRoom(Room* t_room)
 	{
 		m_solids.push_back(pSolid);
 	}
+}
+
+void Map::addEntity(Entity* t_entity)
+{
+	m_entities.push_back(t_entity);
+}
+
+const std::vector<Entity*> Map::getEntities()
+{
+	return m_entities;
 }
 
 const std::vector<Solid*> Map::getSolids()

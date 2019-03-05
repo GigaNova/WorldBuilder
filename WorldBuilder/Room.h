@@ -16,6 +16,7 @@ public:
 	~Room();
 
 	const std::vector<Solid*> getSolids();
+	Solid* getSolid(Wall t_wall);
 private:
 	std::vector<Solid*> m_solids;
 };

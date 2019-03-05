@@ -1,6 +1,7 @@
 #include "RandomRoomDungeon.h"
 #include "Rectangle.h"
 #include <random>
+#include "SpawnPoint.h"
 
 RandomRoomDungeon::RandomRoomDungeon()
 {
@@ -47,6 +48,18 @@ RandomRoomDungeon::RandomRoomDungeon()
 			pRectangle->getHeight() * GRID_SIZE
 		));
 	}
+
+	std::uniform_real_distribution<double> element(0, m_rooms.size());
+	Room* pRandomRoom = m_rooms.at(element(mt));
+	Solid* pFloor = pRandomRoom->getSolid(FLOOR);
+
+	SpawnPoint* pSpawnPoint = new SpawnPoint(
+		pFloor->getX() + (pFloor->getWidth() / 2.0),
+		pFloor->getY() + (pFloor->getLength() / 2.0),
+		pFloor->getZ() + pFloor->getHeight()
+	);
+
+	m_entities.push_back(pSpawnPoint);
 }
 
 

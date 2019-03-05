@@ -8,20 +8,25 @@ public:
 		return instance;
 	}
 
+	int getEntityId()
+	{
+		m_idcounter += 1;
+		return m_idcounter;
+	}
+
 	int getFaceId()
 	{
-		m_facecounter += 1;
-		return m_facecounter;
+		m_idcounter += 1;
+		return m_idcounter;
 	}
 
 	int getSolidId()
 	{
-		m_solidcounter += 1;
-		return m_solidcounter;
+		m_idcounter += 1;
+		return m_idcounter;
 	}
 
 private:
-	int m_facecounter = 0;
-	int m_solidcounter = 0;
+	int m_idcounter = 0;
 };
 

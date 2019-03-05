@@ -2,7 +2,7 @@
 #include "Sides.h"
 #include "IdentityManager.h"
 
-Solid::Solid(int t_x, int t_y, int t_z, int t_width, int t_length, int t_height)
+Solid::Solid(int t_x, int t_y, int t_z, int t_width, int t_length, int t_height) : m_x(t_x), m_y(t_y), m_z(t_z), m_width(t_width), m_length(t_length), m_height(t_height)
 {
 	for(auto face = 0; face < AMOUNT_OF_FACES; ++face)
 	{

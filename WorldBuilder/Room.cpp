@@ -27,3 +27,8 @@ const std::vector<Solid*> Room::getSolids()
 {
 	return m_solids;
 }
+
+Solid* Room::getSolid(Wall t_wall)
+{
+	return m_solids[t_wall];
+}

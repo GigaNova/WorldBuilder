@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Entities">
+      <UniqueIdentifier>{d3f16fa0-6352-4fd4-a3e9-663068b1e052}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Map.h">
@@ -48,6 +51,12 @@
     <ClInclude Include="IdentityManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="SpawnPoint.h">
+      <Filter>Entities</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WorldBuilder.cpp">
@@ -73,6 +82,12 @@
     </ClCompile>
     <ClCompile Include="Dungeon.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="SpawnPoint.cpp">
+      <Filter>Entities</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

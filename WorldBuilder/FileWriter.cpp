@@ -83,6 +83,29 @@ void FileWriter::writeToVmf(Map* t_map, std::string t_location, std::string t_fi
 
 	outfile << BRACKET_CLOSE << std::endl;
 
+	//Entities
+	for(Entity* pEntity : t_map->getEntities())
+	{
+		outfile << "entity" << std::endl;
+		outfile << BRACKET_OPEN << std::endl;
+
+		outfile << tabs(2) << writePair("id", pEntity->getId()) << std::endl;
+		outfile << tabs(2) << writePair("classname", pEntity->getClassName()) << std::endl;
+
+		for(std::pair<std::string, std::string> pair : pEntity->getAttributes())
+		{
+			outfile << tabs(2) << writePair(pair.first, pair.second) << std::endl;
+		}
+
+		outfile << tabs(2) << writePair("origin",
+			std::to_string(pEntity->getX()) + SPACE +
+			std::to_string(pEntity->getY()) + SPACE +
+			std::to_string(pEntity->getZ())
+		) << std::endl;
+
+		outfile << BRACKET_CLOSE << std::endl;
+	}
+
 	//Camera Settings
 	outfile << "cameras" << std::endl;
 	outfile << BRACKET_OPEN << std::endl;

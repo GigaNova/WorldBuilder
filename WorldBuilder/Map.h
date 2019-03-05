@@ -3,6 +3,7 @@
 #include "Solid.h"
 #include "Room.h"
 #include "Dungeon.h"
+#include "Entity.h"
 
 //Hammer restrictions
 static const int MAX_MAP_SIZE = 32768;
@@ -47,9 +48,13 @@ public:
 	void addDungeon(Dungeon* t_dungeon);
 	void addRoom(Room* t_room);
 
+	void addEntity(Entity* t_entity);
+
 	const std::vector<Solid*> getSolids();
+	const std::vector<Entity*> getEntities();
 	const int getAmountOfFaces();
 private:
 	std::vector<Solid*> m_solids;
+	std::vector<Entity*> m_entities;
 };
 

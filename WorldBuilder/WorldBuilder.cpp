@@ -4,7 +4,7 @@
 #include "RandomRoomDungeon.h"
 
 static const short PROGRAM_VERSION_MAJOR = 0;
-static const short PROGRAM_VERSION_MINOR = 3;
+static const short PROGRAM_VERSION_MINOR = 4;
 
 static const std::string OUTPUT_FOLDER = ".\\output\\";
 static const std::string MAP_NAME = "test_map";

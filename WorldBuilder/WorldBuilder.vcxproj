@@ -152,6 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Dungeon.h" />
+    <ClInclude Include="Entity.h" />
     <ClInclude Include="Face.h" />
     <ClInclude Include="FileWriter.h" />
     <ClInclude Include="IdentityManager.h" />
@@ -162,15 +163,18 @@
     <ClInclude Include="Sides.h" />
     <ClInclude Include="Solid.h" />
     <ClInclude Include="SpacialPoint.h" />
+    <ClInclude Include="SpawnPoint.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Dungeon.cpp" />
+    <ClCompile Include="Entity.cpp" />
     <ClCompile Include="Face.cpp" />
     <ClCompile Include="FileWriter.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="RandomRoomDungeon.cpp" />
     <ClCompile Include="Room.cpp" />
     <ClCompile Include="Solid.cpp" />
+    <ClCompile Include="SpawnPoint.cpp" />
     <ClCompile Include="WorldBuilder.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
