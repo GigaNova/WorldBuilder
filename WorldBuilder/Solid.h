@@ -1,9 +1,10 @@
 #pragma once
 #include "Face.h"
 #include <vector>
+#include "Sides.h"
 
 static const short AMOUNT_OF_FACES = 6;
-static const Texture DEFAULT_TEXTURE = "BRICK/BRICKWALL003A";
+static const Texture DEFAULT_TEXTURE = "tools/toolsnodraw";
 
 class Solid
 {
@@ -12,6 +13,8 @@ public:
 
 	int getId() const { return m_id; }
 	std::vector<Face*> getFaces() const { return m_faces; }
+
+	void setFaceTexture(Sides t_side, Texture t_texture);
 private:
 	int m_id;
 	std::vector<Face*> m_faces;

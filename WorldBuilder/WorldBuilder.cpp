@@ -4,10 +4,10 @@
 #include "RandomRoomDungeon.h"
 
 static const short PROGRAM_VERSION_MAJOR = 0;
-static const short PROGRAM_VERSION_MINOR = 2;
+static const short PROGRAM_VERSION_MINOR = 3;
 
 static const std::string OUTPUT_FOLDER = ".\\output\\";
-static const std::string MAP_NAME = "test_dungeon";
+static const std::string MAP_NAME = "test_map";
 
 int main()
 {

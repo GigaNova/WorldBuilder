@@ -79,3 +79,8 @@ Solid::Solid(int t_x, int t_y, int t_z, int t_width, int t_length, int t_height)
 		m_faces.push_back(p_face);
 	}
 }
+
+void Solid::setFaceTexture(Sides t_side, Texture t_texture)
+{
+	m_faces.at(t_side)->setTexture(t_texture);
+}
