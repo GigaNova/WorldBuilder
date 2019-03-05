@@ -6,8 +6,8 @@
 static const short PROGRAM_VERSION_MAJOR = 0;
 static const short PROGRAM_VERSION_MINOR = 2;
 
-static const std::string OUTPUT_FOLDER = "E:\\Users\\Styn\\Desktop\\Projecten\\City of the Doomed\\Gen\\";
-static const std::string MAP_NAME = "test_map";
+static const std::string OUTPUT_FOLDER = ".\\output\\";
+static const std::string MAP_NAME = "test_dungeon";
 
 int main()
 {
