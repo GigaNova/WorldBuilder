@@ -18,22 +18,14 @@ void Map::addSolid(int t_x, int t_y, int t_z, int t_width, int t_length, int t_h
 
 void Map::addDungeon(Dungeon* t_dungeon)
 {
-	for (Room* pRoom : t_dungeon->getRooms())
+	for (Solid* pSolid : t_dungeon->getSolids())
 	{
-		addRoom(pRoom);
+		m_solids.push_back(pSolid);
 	}
 
 	for (Entity* pEntity : t_dungeon->getEntities())
 	{
 		m_entities.push_back(pEntity);
-	}
-}
-
-void Map::addRoom(Room* t_room)
-{
-	for(Solid* pSolid : t_room->getSolids())
-	{
-		m_solids.push_back(pSolid);
 	}
 }
 

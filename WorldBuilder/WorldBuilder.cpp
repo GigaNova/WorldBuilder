@@ -2,9 +2,10 @@
 #include "Map.h"
 #include "FileWriter.h"
 #include "RandomRoomDungeon.h"
+#include "ComplexDungeon.h"
 
 static const short PROGRAM_VERSION_MAJOR = 0;
-static const short PROGRAM_VERSION_MINOR = 4;
+static const short PROGRAM_VERSION_MINOR = 5;
 
 static const std::string OUTPUT_FOLDER = ".\\output\\";
 static const std::string MAP_NAME = "test_map";
@@ -17,8 +18,8 @@ int main()
 	Map* pMap = new Map();
 
 	std::cout << "Generating random rooms..." << std::endl;
-	RandomRoomDungeon* randomRoomDungeon = new RandomRoomDungeon();
-	pMap->addDungeon(randomRoomDungeon);
+	ComplexDungeon* pDungeon = new ComplexDungeon();
+	pMap->addDungeon(pDungeon);
 
 	std::cout << pMap->getAmountOfFaces() / AMOUNT_OF_FACES << " solids/" << pMap->getAmountOfFaces() << " faces..." << std::endl;
 

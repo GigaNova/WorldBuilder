@@ -2,6 +2,7 @@
 #include "Rectangle.h"
 #include <random>
 #include "SpawnPoint.h"
+#include "Map.h"
 
 RandomRoomDungeon::RandomRoomDungeon()
 {
@@ -65,4 +66,19 @@ RandomRoomDungeon::RandomRoomDungeon()
 
 RandomRoomDungeon::~RandomRoomDungeon()
 {
+}
+
+std::vector<Solid*> RandomRoomDungeon::getSolids()
+{
+	std::vector<Solid*> solids;
+
+	for (Room* pRoom : m_rooms)
+	{
+		for (Solid* pSolid : pRoom->getSolids())
+		{
+			solids.push_back(pSolid);
+		}
+	}
+
+	return solids;
 }

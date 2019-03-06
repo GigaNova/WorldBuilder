@@ -80,7 +80,41 @@ Solid::Solid(int t_x, int t_y, int t_z, int t_width, int t_length, int t_height)
 	}
 }
 
+void Solid::move(int t_x, int t_y, int t_z, SpacialPoint t_center)
+{
+	int dist_x = t_center.getX() - m_x;
+	int dist_y = t_center.getY() - m_y;
+	int dist_z = t_center.getZ() - m_z;
+
+	int diff_x = t_x - m_x - dist_x;
+	int diff_y = t_y - m_y - dist_y;
+	int diff_z = t_z - m_z - dist_z;
+
+	for(Face* pFace : m_faces)
+	{
+		pFace->move(diff_x, diff_y, diff_z);
+	}
+}
+
+void Solid::rotate(int t_x, int t_y, int t_z, SpacialPoint t_center)
+{
+	for (Face* pFace : m_faces)
+	{
+		pFace->rotate(t_x, t_y, t_z, t_center);
+	}
+}
+
 void Solid::setFaceTexture(Sides t_side, Texture t_texture)
 {
 	m_faces.at(t_side)->setTexture(t_texture);
+}
+
+void Solid::setTexture(Texture t_texture)
+{
+	setFaceTexture(FRONT, t_texture);
+	setFaceTexture(BACK, t_texture);
+	setFaceTexture(TOP, t_texture);
+	setFaceTexture(BOTTOM, t_texture);
+	setFaceTexture(LEFT, t_texture);
+	setFaceTexture(RIGHT, t_texture);
 }

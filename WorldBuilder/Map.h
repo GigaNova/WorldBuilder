@@ -7,6 +7,7 @@
 
 //Hammer restrictions
 static const int MAX_MAP_SIZE = 32768;
+static const int GRID_SIZE = 64;
 
 //Version Info
 static const int EDITOR_VERSION = 400;
@@ -46,7 +47,6 @@ public:
 
 	void addSolid(int t_x, int t_y, int t_z, int t_width, int t_length, int t_height);
 	void addDungeon(Dungeon* t_dungeon);
-	void addRoom(Room* t_room);
 
 	void addEntity(Entity* t_entity);
 

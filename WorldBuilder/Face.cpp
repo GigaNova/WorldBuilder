@@ -30,3 +30,15 @@ void Face::setVAxis(int t_x, int t_y, int t_z, int t_v)
 	m_vaxis[3] = t_v;
 }
 
+void Face::rotate(int t_x, int t_y, int t_z, SpacialPoint t_center)
+{
+	//TODO
+}
+
+void Face::move(int t_x, int t_y, int t_z)
+{
+	m_x = SpacialPoint(m_x.getX() + t_x, m_x.getY() + t_y, m_x.getZ() + t_z);
+	m_y = SpacialPoint(m_y.getX() + t_x, m_y.getY() + t_y, m_y.getZ() + t_z);
+	m_z = SpacialPoint(m_z.getX() + t_x, m_z.getY() + t_y, m_z.getZ() + t_z);
+}
+

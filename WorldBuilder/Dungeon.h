@@ -8,8 +8,8 @@ public:
 	Dungeon();
 	~Dungeon();
 
-	std::vector<Room*> getRooms() const { return m_rooms; }
 	std::vector<Entity*> getEntities() const { return m_entities; }
+	virtual std::vector<Solid*> getSolids() = 0;
 protected:
 	std::vector<Room*> m_rooms;
 	std::vector<Entity*> m_entities;

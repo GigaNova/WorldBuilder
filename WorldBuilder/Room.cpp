@@ -30,5 +30,6 @@ const std::vector<Solid*> Room::getSolids()
 
 Solid* Room::getSolid(Wall t_wall)
 {
+	if (t_wall >= m_solids.size()) return nullptr;
 	return m_solids[t_wall];
 }

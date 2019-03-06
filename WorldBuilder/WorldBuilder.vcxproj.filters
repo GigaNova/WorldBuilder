@@ -16,78 +16,135 @@
     <Filter Include="Entities">
       <UniqueIdentifier>{d3f16fa0-6352-4fd4-a3e9-663068b1e052}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Complex">
+      <UniqueIdentifier>{cea9c6c6-2c0a-4c6e-82c5-aea59600622e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{57dedc6e-e1c5-4ad1-81cb-4f6739c165ee}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Map.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Solid.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Face.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Sides.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SpacialPoint.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="FileWriter.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Room.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="RandomRoomDungeon.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Rectangle.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Dungeon.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="IdentityManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Entity.h">
       <Filter>Entities</Filter>
     </ClInclude>
     <ClInclude Include="SpawnPoint.h">
       <Filter>Entities</Filter>
     </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>Complex</Filter>
+    </ClInclude>
+    <ClInclude Include="ConnectionPoint.h">
+      <Filter>Complex</Filter>
+    </ClInclude>
+    <ClInclude Include="BoundingBox.h">
+      <Filter>Complex</Filter>
+    </ClInclude>
+    <ClInclude Include="SpacialPoint.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Corridor.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Dungeon.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Face.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="FileWriter.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="IdentityManager.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomRoomDungeon.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Rectangle.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Room.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Sides.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Solid.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Walkway.h">
+      <Filter>Complex</Filter>
+    </ClInclude>
+    <ClInclude Include="ComplexDungeon.h">
+      <Filter>Complex</Filter>
+    </ClInclude>
+    <ClInclude Include="NumberHelper.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenRoom.h">
+      <Filter>Complex</Filter>
+    </ClInclude>
+    <ClInclude Include="Matter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="WorldBuilder.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Map.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Solid.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Face.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="FileWriter.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Room.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="RandomRoomDungeon.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Dungeon.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Entity.cpp">
       <Filter>Entities</Filter>
     </ClCompile>
     <ClCompile Include="SpawnPoint.cpp">
       <Filter>Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Component.cpp">
+      <Filter>Complex</Filter>
+    </ClCompile>
+    <ClCompile Include="ConnectionPoint.cpp">
+      <Filter>Complex</Filter>
+    </ClCompile>
+    <ClCompile Include="BoundingBox.cpp">
+      <Filter>Complex</Filter>
+    </ClCompile>
+    <ClCompile Include="Corridor.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Dungeon.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Face.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="FileWriter.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldBuilder.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Solid.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Room.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomRoomDungeon.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Walkway.cpp">
+      <Filter>Complex</Filter>
+    </ClCompile>
+    <ClCompile Include="ComplexDungeon.cpp">
+      <Filter>Complex</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenRoom.cpp">
+      <Filter>Complex</Filter>
+    </ClCompile>
+    <ClCompile Include="Matter.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

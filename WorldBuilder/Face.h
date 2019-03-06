@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include "SpacialPoint.h"
+#include "Matter.h"
 
 typedef std::string Texture;
 
@@ -11,7 +12,7 @@ static const short DEFAULT_SMOOTHINGROUPS = 0;
 class Face
 {
 public:
-	Face(Texture t_texture, SpacialPoint t_x, SpacialPoint t_y, SpacialPoint t_z);;
+	Face(Texture t_texture, SpacialPoint t_x, SpacialPoint t_y, SpacialPoint t_z);
 
 	int getId() const { return m_id; }
 
@@ -30,6 +31,9 @@ public:
 	short getRotation() const{ return m_rotation; }
 	short getLightMapScale() const { return m_lightmapscale; }
 	short getSmoothingGroups() const { return m_smoothinggroups; }
+
+	void rotate(int t_x, int t_y, int t_z, SpacialPoint t_center);
+	void move(int t_x, int t_y, int t_z);
 private:
 	int m_id;
 
